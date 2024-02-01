@@ -579,6 +579,23 @@ main section:nth-child(6) article:nth-child(1) a:hover{
         background-image: none!important;
         width: 100%;
     }
+    footer ul{
+        flex-direction: column;
+    }
+    #footer > section > article{
+        grid-template-columns: 1fr 1fr;
+    }
+    .reseau-footer{
+        grid-column: 2;
+    }
+    footer section article img{
+        grid-row: 1/3;
+        margin: auto;
+        width: 100%;
+    }
+    footer section article p{
+        grid-column: 1/3;
+    }
 }
 
 @media screen and (max-width: 1439px){
@@ -625,16 +642,24 @@ main section:nth-child(6) article:nth-child(1) a:hover{
         display: flex!important;
         justify-content: center;
     }
-    #burger-menu2{
-        display: grid;
-        align-items: center;
-        text-align: center;
+    #footer > section > article > ul{
+        grid-column: 1;
+        grid-row: 2;
     }
-    #footer > section > article > ul, #footer > section > article > div{
-        display: none;
+    #footer > section > article > p{
+        grid-column: 1;
+        grid-row: 4;
     }
     #footer > section > article{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .reseau-footer {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    footer section article img{
+        grid-column: 1;
+        grid-row: 1;
     }
 }
 
@@ -666,25 +691,24 @@ main section:nth-child(6) article:nth-child(1) a:hover{
     main section:nth-child(6) article:nth-child(1){
     padding: 20px;
     }
-    #footer > section > article > ul, #footer > section > article > div{
-        display: none;
+    #footer > section > article > ul{
+        grid-column: 1;
+        grid-row: 2;
     }
-    #burger-menu2{
-        display: grid;
-        align-items: center;
+    #footer > section > article > p{
+        grid-column: 1;
+        grid-row: 4;
     }
     #footer > section > article{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 10px;
+        grid-template-columns: 1fr;
     }
-    footer section article p{
-        grid-column: 1/4;
+    .reseau-footer {
+        grid-column: 1;
         grid-row: 3;
     }
-    #footer > section > article > img{
+    footer section article img{
         grid-column: 1;
-        grid-row: 1/3;
+        grid-row: 1;
     }
     #section-3 > article:nth-child(1){
         display: grid;
